@@ -1,4 +1,4 @@
-name: Deploy Production
+name: DEPLOY PRODUCTION
 on:
     pull_request:
         types: [closed]

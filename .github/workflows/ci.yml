@@ -1,4 +1,4 @@
-name: CI/CD Fake
+name: CI FAKE
 on: 
     push:
       branches:
