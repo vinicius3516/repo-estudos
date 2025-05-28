@@ -1,6 +1,10 @@
 name: CI/CD Fake
 on: 
-    workflow_dispatch:
+    push:
+      branches:
+        - main
+        - development
+        - prodution
 jobs:
     CI:
         runs-on: ubuntu-latest
@@ -15,6 +19,6 @@ jobs:
       needs: CI
       uses: vinicius3516/repo-estudos/.github/workflows/Deploy.yml@main
       with:
-        ambiente: dev
+        ambiente: ${{ github.ref_name }}
 
 
