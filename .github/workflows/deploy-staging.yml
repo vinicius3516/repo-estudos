@@ -3,11 +3,12 @@ on:
     pull_request:
         types: [closed]
         branches:
-            - staging
+          - main
+
 jobs:
   Deploy_Staging:
     if: ${{ github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
     steps:
       - name: Deploy no ambiente
-        run: echo "Executando o deploy no ambiente de Staging"
+        run: echo "Executando o deploy no ambiente de Main"
