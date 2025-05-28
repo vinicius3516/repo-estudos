@@ -1,0 +1,13 @@
+name: Deploy Production
+on:
+    pull_request:
+        types: [closed]
+        branches:
+            - production
+jobs:
+    Deploy_Production:
+        if: ${{ github.event.pull_request.merged == true }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy no ambiente
+              run: echo "Executando o deploy no ambiente de Production"
